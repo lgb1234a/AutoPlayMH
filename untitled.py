@@ -19,7 +19,7 @@ if localtime.tm_wday == 2 or localtime.tm_wday == 5:
     huishi = 0
     dianshi = 0
 
-wangyang_jieshu = 0
+fengyao_jieshu = 0
 while 1:
     localtime = time.localtime(time.time())
     hour = localtime.tm_hour
@@ -28,21 +28,21 @@ while 1:
         #地煞
         disha.start()
     
-    if not wangyang_jieshu and min > 0 and min < 20 and min < last_yaowang_start_time:
+    if not fengyao_jieshu and min > 0 and min < 20 and min < last_yaowang_start_time:
         #封妖
-        wangyang_jieshu = fengyao.start()
+        fengyao_jieshu = fengyao.start()
         last_yaowang_start_time = 1
         
-    if not wangyang_jieshu and min > 40 and min < 50 and min > last_yaowang_start_time:
+    if not fengyao_jieshu and min > 40 and min < 50 and min > last_yaowang_start_time:
         #封妖
-        wangyang_jieshu = fengyao.start()
+        fengyao_jieshu = fengyao.start()
         last_yaowang_start_time = 50
         
-    if hour == 11 and min == 20 or hour == 11 and last_yaowang_start_time == 1:
+    if hour == 11 and min == 20:
         #开启飞贼
         hall.dianji_feizei()
         
-    if hour == 19 and min == 20 or hour == 19 and last_yaowang_start_time == 1:
+    if hour == 19 and min == 20:
         #校场演兵
         hall.jiaochang_yanbing()
         
