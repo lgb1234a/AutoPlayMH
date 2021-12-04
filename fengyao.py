@@ -87,3 +87,4 @@ def fengyao():
     touch(Template(r"tpl1638592496845.png", record_pos=(0.324, -0.472), resolution=(547, 974)))
     touch(Template(r"tpl1638592503477.png", record_pos=(0.259, 0.325), resolution=(547, 974)))
     touch(Template(r"tpl1638592563937.png", record_pos=(-0.003, 0.32), resolution=(547, 974)))
+
